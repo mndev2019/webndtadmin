@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body{
+  background-color: #d8a2891c;
+}
+/* .tablehead {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, black 0%, #ff5e14 100%);
+  color: white;
+} */
