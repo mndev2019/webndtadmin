@@ -10,6 +10,7 @@ import axios from "axios"
 
 const Clients = () => {
     const [data, setdata] = useState([]);
+    const [editimage, seteditimage] = useState("")
     const [image, setimage] = useState("")
     const [editid, seteditid] = useState("");
     const handlesubmit = async (e) => {
@@ -42,7 +43,7 @@ const Clients = () => {
         seteditid(id)
         const found = data.find(itm => itm._id == id);
         if (found) {
-            setimage(found.image)
+            seteditimage(found.image)
 
         } else {
             console.error('Item not found');
@@ -68,12 +69,17 @@ const Clients = () => {
             <section className="py-5">
                 <div className="container">
                     <Form onSubmit={handlesubmit}>
-                        <div className="grid grid-cols-2 gap-2">
-
-
+                        <div className="grid grid-cols-3 gap-2">
+                            {
+                                editid &&
+                                <div className="col-span-1">
+                                    <img src={`${BASE_URL}${editimage}`} className="h-[80px] w-[80px]" />
+                                </div>
+                            }
                             <div className="col-span-1">
                                 {/* Banner Image Input */}
                                 <FormLabel label="Client Image" />
+
                                 <input
                                     type="file"
                                     name="clientImage"
@@ -85,13 +91,13 @@ const Clients = () => {
                                 />
                             </div>
 
-                            <div className="col-span-1 mt-2 ">
+                            <div className="col-span-1 mt-5">
                                 <button
                                     type="submit"
                                     className="bg-primary text-xs uppercase font-y tracking-wider text-white px-5 rounded py-3 shadow-sm shadow-light"
 
                                 >
-                                    SUBMIT
+                                    {editid ? "Update" : "Submit"}
                                 </button>
                             </div>
                         </div>

@@ -62,6 +62,7 @@ const Services = () => {
     const handleedit = (id) => {
         seteditid(id)
         const found = data.find(itm => itm.url == id);
+       
         if (found) {
             settitle(found.title)
             setdescription(found.description)
@@ -102,6 +103,7 @@ const Services = () => {
                                         name="title"
                                         id="servicetitle"
                                         className="rounded w-full text-blue-gray-900 outline-none border border-blue-gray-200 text-sm p-2"
+                                        value={title}
                                         onChange={(e) => settitle(e.target.value)}
                                     />
                                 </div>
@@ -115,7 +117,7 @@ const Services = () => {
                                         id="serviceicon"
                                         className="rounded w-full text-blue-gray-900 outline-none border border-blue-gray-200 text-sm p-2"
                                         onChange={handleicon}
-                                        required
+                                        
                                     />
                                 </div>
                             </div>
@@ -128,7 +130,7 @@ const Services = () => {
                                         id="serviceimage"
                                         className="rounded w-full text-blue-gray-900 outline-none border border-blue-gray-200 text-sm p-2"
                                         onChange={handleimage}
-                                        required
+                                     
                                     />
                                 </div>
                             </div>
@@ -141,6 +143,7 @@ const Services = () => {
                                         name="servicedescription"
                                         id="servicedescription"
                                         className="rounded w-full text-blue-gray-900 outline-none border border-blue-gray-200 text-sm p-2"
+                                        value={short_description}
                                         onChange={(e) => setshort_description(e.target.value)}
                                     />
                                 </div>
