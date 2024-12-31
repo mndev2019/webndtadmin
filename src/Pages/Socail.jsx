@@ -12,7 +12,7 @@ const Socail = () => {
     const [data, setdata] = useState([]);
     const [name, setname] = useState("");
     const [value, setvalue] = useState("");
-    const [image, setimage] = useState("")
+    const [image, setimage] = useState("");
     const [editid, seteditid] = useState("");
     const handlesubmit = async (e) => {
         e.preventDefault();
@@ -88,11 +88,11 @@ const Socail = () => {
                                     onChange={(e) => setname(e.target.value)}
                                     className="rounded w-full text-blue-gray-900 outline-none border border-blue-gray-200 text-sm p-2"
                                     placeholder="Enter Sector Title"
-                                   
+
                                 />
                             </div>
                             <div className="col-span-1">
-                              
+
                                 <FormLabel label="Social Image" />
                                 <input
                                     type="file"
@@ -101,7 +101,7 @@ const Socail = () => {
                                     accept="image/*"
                                     onChange={handleimage}
                                     className="rounded w-full text-blue-gray-900 outline-none border border-blue-gray-200 text-sm p-2"
-                                   
+
                                 />
                             </div>
                             <div className="col-span-2">
@@ -115,7 +115,7 @@ const Socail = () => {
                                     className="rounded w-full text-blue-gray-900 outline-none border border-blue-gray-200 text-sm p-2 resize-none"
                                     rows="4"
                                     placeholder="Enter Banner Description"
-                                   
+
                                 />
                             </div>
                             <div className="col-span-1 mt-2 ">

@@ -2,7 +2,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Layout from './Layout/Layout'
-import Home from './Pages/Home'
+// import Home from './Pages/Home'
 import Services from './Pages/Services'
 import Sector from './Pages/Sector'
 import Sectordetails from './Pages/Sectordetails'
@@ -12,6 +12,7 @@ import Socail from './Pages/Socail'
 import Contact from './Pages/Contact'
 import Authlayout from './Authlayout'
 import Login from './Authlayout/Login'
+import Aboutus from './Pages/Aboutus'
 
 function App() {
   const ThemeRoutes = createBrowserRouter(
@@ -25,6 +26,7 @@ function App() {
           <Route path='/sector-details' element={<Sectordetails />} />
           <Route path='/banner' element={<Banner />} />
           <Route path='/client' element={<Clients />} />
+          <Route path='/aboutus' element={<Aboutus/>}/>
           <Route path='/social' element={<Socail />} />
           <Route path='/contact' element={<Contact />} />
 
