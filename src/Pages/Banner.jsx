@@ -101,7 +101,7 @@ const Banner = () => {
                                     accept="image/*"
                                     onChange={handleimage}
                                     className="rounded w-full text-blue-gray-900 outline-none border border-blue-gray-200 text-sm p-2"
-                                    required
+                                    
                                 />
                             </div>
                             <div className="col-span-2">
