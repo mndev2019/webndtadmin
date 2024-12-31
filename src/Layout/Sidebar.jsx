@@ -49,6 +49,19 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <li>
+                        <Link to={'/aboutus'} className='w-full py-1 ps-3 text-start block rounded-lg'>
+                            <div className="w-full flex gap-3 items-center hover:bg-[#d8a28980] rounded-md">
+                                <div className={`h-[40px] w-[40px] flex justify-center items-center rounded-md ${location.pathname === '/aboutus' ? 'bg-black' : 'bg-[#faebd7b5] '}`}>
+                                    <ImUser className={`text-xl  ${location.pathname === '/aboutus' ? 'text-white' : 'text-black '}`} />
+
+                                </div>
+                                <div className={`font-bold text-[15px] text-white ${location.pathname === '/aboutus' ? 'text-primary' : 'text-black'}`}>
+                                    <p className={`font-bold text-[15px]  ${location.pathname === '/aboutus' ? 'text-white' : 'text-black'}`}>About Us</p>
+                                </div>
+                            </div>
+                        </Link>
+                    </li>
+                    <li>
                         <Link to={'/services'} className='w-full py-1 ps-3 text-start block rounded-lg'>
                             <div className="w-full flex gap-3 items-center hover:bg-[#d8a28980] rounded-md">
                                 <div className={`h-[40px] w-[40px] flex justify-center items-center rounded-md ${location.pathname === '/services' ? 'bg-black' : 'bg-[#faebd7b5] '}`}>
