@@ -9,7 +9,7 @@ import axios from "axios"
 import { useEffect } from "react"
 import { EditOutlined } from "@ant-design/icons"
 import { FaTrash } from "react-icons/fa"
-import { Form} from "react-router-dom"
+import { Form } from "react-router-dom"
 
 const Sectordetails = () => {
     // const {url} = useParams();
@@ -62,9 +62,9 @@ const Sectordetails = () => {
         seteditid(id)
         const found = data.find(itm => itm._id == id);
         if (found) {
-            settitle(found.title)
-            setsector(found.sector)
-            setdetail(found.detail)
+            settitle(found?.title)
+            setsector(found?.sector)
+            setdetail(found?.detail)
 
         } else {
             console.error('Item not found');
@@ -105,7 +105,7 @@ const Sectordetails = () => {
                                     </option>
                                     {sectordata.map((item) => (
                                         <option key={item._id} value={item._id}>
-                                            {item.title}
+                                            {item?.title}
                                         </option>
                                     ))}
                                 </select>
@@ -176,21 +176,21 @@ const Sectordetails = () => {
                                                         {index + 1}
                                                     </td>
                                                     <td>
-                                                        <td>{itm.sector.title}</td>
+                                                        <td>{itm?.sector?.title}</td>
                                                     </td>
                                                     <td>
-                                                        {itm.title}
+                                                        {itm?.title}
                                                     </td>
                                                     <td>
-                                                       <div   dangerouslySetInnerHTML={{ __html: itm.detail }}/>
+                                                        <div dangerouslySetInnerHTML={{ __html: itm?.detail }} />
                                                     </td>
                                                     <td>
                                                         <div className="flex gap-3">
-                                                            <button onClick={() => handleedit(itm._id)} className="h-[40px] w-[40px] rounded-[5px] bg-primary flex items-center justify-center">
+                                                            <button onClick={() => handleedit(itm?._id)} className="h-[40px] w-[40px] rounded-[5px] bg-primary flex items-center justify-center">
                                                                 <EditOutlined className='text-white text-[20px] font-[900]' />
                                                             </button>
                                                             <button className="h-[40px] w-[40px] rounded-[5px] bg-primary flex items-center justify-center">
-                                                                <FaTrash onClick={()=> handledelete(itm._id)} className='text-white text-[20px] font-[900]' />
+                                                                <FaTrash onClick={() => handledelete(itm?._id)} className='text-white text-[20px] font-[900]' />
                                                             </button>
                                                         </div>
                                                     </td>
