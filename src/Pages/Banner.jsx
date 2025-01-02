@@ -18,7 +18,9 @@ const Banner = () => {
         e.preventDefault();
         let formdata = new FormData();
         formdata.append("title", title);
-        formdata.append("image", image);
+        if(image){
+            formdata.append("image", image);
+        }
         formdata.append("description", description);
         if (editid) {
             await axios.put(`${BASE_URL}banners/${editid}`, formdata).then(resp => console.log(resp))
